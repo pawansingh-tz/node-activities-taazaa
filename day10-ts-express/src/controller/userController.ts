@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { UserModel } from "../postgres-connection/postgres.js";
+import { UserModel } from "../postgres-connection/postgres.ts";
 
 // Get all users
 export const getAllUser = async (req: Request, res: Response): Promise<Response> => {

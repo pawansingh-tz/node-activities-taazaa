@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize";
-import { createUserModel } from "../model/userSchema";
+import { createUserModel } from "../model/userSchema.js";
 
 const sequelize = new Sequelize('user-crud', 'postgres', 'Kasia@123', {
   host: 'localhost',
@@ -14,6 +14,7 @@ const connection = async ()=>{
         console.log('Connection has been established successfully.');
         UserModel = createUserModel(sequelize);
         await sequelize.sync() ; // create the table in db 
+        // Usermodel.sync() ;
     } catch (error) {
         console.error('Unable to connect to the database:', error);
     }
