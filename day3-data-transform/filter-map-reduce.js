@@ -14,8 +14,8 @@ function temporary (user){
 //**********************************
 // filter active users only 
 const activeUsers = users.filter(
-    //user => user.active  
-    user => temporary(user)
+    user => user.active  
+    //user => temporary(user)
 );
 
 //console.log(activeUsers);
